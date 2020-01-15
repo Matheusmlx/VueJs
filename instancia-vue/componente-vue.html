@@ -1,0 +1,39 @@
+<meta charset="UTF-8" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <comp></comp>
+</div>
+
+<script>
+  //Criando um componente
+
+  Vue.component("comp", {
+    template: "<h1>Componente Vue</h1>"
+  });
+
+  const vm = new Vue({
+    //     template: `
+    //         <div>
+    //             <h1>{{aula}}</h1>
+    //   <h2>{{modulo}}</h2>
+    //   <button @click="alterarAula">Alterar Aula</button>
+    //   <button @click="alterarModulo">Alterar Aula</button>
+    //         </div>
+    //       `,
+
+    el: "#app",
+    data: {
+      aula: "Aula: Montando Instancia Vue",
+      modulo: "Modulo: Instancia Vue"
+    },
+    methods: {
+      alterarAula() {
+        this.aula += "#";
+      },
+      alterarModulo() {
+        this.modulo += "#";
+      }
+    }
+  });
+</script>
