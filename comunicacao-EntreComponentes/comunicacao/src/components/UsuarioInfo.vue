@@ -7,6 +7,10 @@
       Nome do Usuario
       <strong>{{inverterNome()}}</strong>
     </p>
+    <p>
+      Idade do Usuario
+      <strong>{{idade}}</strong>
+    </p>
     <button @click="reiniciarNome">Reiniciar Nome</button>
   </div>
 </template>
@@ -15,7 +19,8 @@
 export default {
   props: {
     //pode ser tratado como sendo uma string ou array
-    nome: [String, Array]
+    nome: [String, Array],
+    idade: Number
   },
   methods: {
     inverterNome() {
